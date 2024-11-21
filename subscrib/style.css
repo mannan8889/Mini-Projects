@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #191825;
+    display: grid;
+    place-items: center;
+}
+
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 96px;
+    text-shadow: -1px 2px 3px rgba(236, 247, 76, 0.2);
+    position: relative;
+}
+
+h1::before{
+    content: "subscribe...";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #e0b;
+    text-transform: uppercase;
+    border-right: 2px solid #e0b;
+    overflow: hidden;
+    animation: textreveal 3s linear infinite;
+}
+
+@keyframes textreveal{
+    0%{
+        width: 0;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
